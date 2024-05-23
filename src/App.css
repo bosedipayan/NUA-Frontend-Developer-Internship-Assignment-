@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+/* src/App.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+th:hover {
+  background-color: #f1f1f1;
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+select {
+  margin-right: 10px;
+}
+
+
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+}
+
+.sub-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sub-container .search-container {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* for searching */
+
+.search-input {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  text-align: center;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+
+/* designing pagination */
+
+.custom-select {
+  height: 40px;
+  width: 150px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.custom-select:hover {
+  border-color: #007bff;
+  background-color: #e9ecef;
+}
+
+.custom-select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* download csv button */
+.download-button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f880f;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-button:hover {
+  background-color: #207107;
 }
